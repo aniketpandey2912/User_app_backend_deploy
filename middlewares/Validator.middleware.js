@@ -1,6 +1,5 @@
 const Validator = async (req, res, next) => {
   let { authorization, role } = req.headers;
-  console.log(req.headers);
   if (authorization && role === "Admin") {
     next();
   } else {
