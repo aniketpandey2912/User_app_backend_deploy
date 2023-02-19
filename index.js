@@ -5,6 +5,10 @@ const app = express();
 app.use(express.json());
 const { usersRouter } = require("./routes/Users.routes");
 
+const cors = require("cors");
+
+app.use(cors());
+
 app.get("/", (req, res) => {
   res.send("WELCOME");
 });
